@@ -51,12 +51,22 @@ export default function App() {
         {userToken === null ? (
           // No token found, user isn't signed in
           <>
-            {/* <Tab.Screen name="SignUp">
+            <Tab.Screen
+              name="Home"
+              component={HomeScreen}
+              tabBarColor={"#F85358"}
+              options={{
+                tabBarIcon: () => {
+                  <Icon name="ios-home" color={"red"} size={25} />;
+                },
+              }}
+            />
+            <Tab.Screen name="SignUp">
               {() => <SignupScreen setToken={setToken} />}
             </Tab.Screen>
             <Tab.Screen name="SignIn">
               {() => <SigninScreen setToken={setToken} />}
-            </Tab.Screen> */}
+            </Tab.Screen>
           </>
         ) : (
           <>
